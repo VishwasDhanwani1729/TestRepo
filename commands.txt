@@ -1,0 +1,34 @@
+git add <files>
+git commit -m ""
+git push --set-upstream origin branch2
+git pull
+git restore <files>
+git status	for listing modified files
+git diff	will display the differences in the remote branch and local branch
+
+git branch <branchName> create new branch in local repo
+git checkout <branchName>
+git push --set-upstream origin <branchName>
+
+----------------------------------------------------------------
+c1<-c2<-c3 [master]
+	   <-c4 [rBranch]
+	   <-c5 [mBranch]
+
+rebasing
+c1<-c2<-c3<-c4<-c6 [main,rBranch]
+	   <-c5 [mBranch]
+
+new commit of main & mBranch
+c1<-c2<-c3<-c4<-c6 [rBranch] <-c7 [main]
+	   <-c5 [mBranch]
+
+merging
+c1<-c2<-c3<-c4<-c6 [rBranch] <-c7 <-c8 [main]
+	   <-c5 [mBranch]
+----------------------------------------------------------------
+
+git stash
+// will stash all the changes from the last commit made
+git stash pop
+git stash show
